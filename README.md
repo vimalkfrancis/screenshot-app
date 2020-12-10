@@ -1,4 +1,3 @@
 # screenshot-app
-open terminal in the root directory
-Run $ npm run dev
+Open terminal in the root directory and then run $ npm run dev
   
