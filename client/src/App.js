@@ -12,11 +12,7 @@ class App extends Component {
   handleSubmit = async e => {
     e.preventDefault();
 
-    if((this.state.screenshotUrl || this.state.imgName || this.state.imgFormat)===''){
-      
-      this.setState({message:'Please fill  the form'});
-    }
-    else{
+    if((this.state.screenshotUrl && this.state.imgName && this.state.imgFormat)!==''){
 
       await fetch('/api/screenshot' , {
         method: 'POST',
@@ -30,6 +26,12 @@ class App extends Component {
           this.setState({message:text});
         })
       })
+      
+     
+    }
+    else{
+
+      this.setState({message:'Please fill  the form'});
 
     }
 
