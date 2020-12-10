@@ -3,6 +3,8 @@ const bodyParser = require("body-parser");
 const webshot = require('webshot');
 const Fs = require('fs');
 const path = require('path');
+var cors = require('cors');
+const helmet = require("helmet");
 const app = express();
 
 
@@ -10,6 +12,26 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.resolve(__dirname, "screenshots")));
+
+
+
+// ** MIDDLEWARE ** //
+const whitelist = ['http://localhost:3000', 'http://localhost:5000', 'https://shrouded-journey-38552.herokuapp.com']
+const corsOptions = {
+  origin: function (origin, callback) {
+    console.log("** Origin of request " + origin)
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      console.log("Origin acceptable")
+      callback(null, true)
+    } else {
+      console.log("Origin rejected")
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
+
+app.use(helmet());
+app.use(cors(corsOptions));
 
 app.post("/api/screenshot", (req, res) => {
  
