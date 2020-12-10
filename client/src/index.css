@@ -1,0 +1,110 @@
+body {
+  /* background:url('https://images.unsplash.com/photo-1519405530001-3b5e82ba4dac?ixlib=rb-1.2.1&auto=format&fit=crop&w=2125&q=80'); */
+  /* background:url('backgroundImage.jpg'); */
+  /*Photo by Dane Deaner https://unsplash.com/@danedeaner*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+  width: 150;
+  justify-content: center;
+  background-image: url('backgroundImage2.jpg');
+  /* background-size: 1500px; */
+}
+
+form{
+  margin: 4em 30%;
+}
+
+.input1{
+  height: 3em;
+  width: 40em;
+  text-align: center;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  box-shadow: 3px 2px 12px 2px rgba(73, 73, 73, 0.233);
+}
+
+
+.input2{
+  height: 3em;
+  width: 15em;
+  text-align: center;
+  border: none;
+  background-color:white;
+  border-color: grey(43, 202, 11);
+  box-shadow: 3px 2px 12px 2px rgba(73, 73, 73, 0.233);
+}
+
+/* .custom-select{
+  height: 1.5em;
+  width: 10em;
+  text-align: center;
+  border-radius: 12px;
+  background-color: white;
+} */
+.select{
+  height: 3em;
+  width: 15em;
+  text-align: center;
+  border: none;
+  background-color:white;
+  border-color: grey(43, 202, 11);
+  box-shadow: 3px 2px 12px 2px rgba(73, 73, 73, 0.233);
+}
+.opt{
+  background-color:white;
+}
+
+
+
+
+form button{
+  margin-top: 2em;
+  background-color:rgb(46, 171, 212);
+  width: 17em;
+  border: transparent;
+  height: 2em;
+  font-size: 2em;
+  color: white;
+  transition: ease-in-out 0.3s;
+  box-shadow: 3px 2px 12px 2px rgba(73, 73, 73, 0.233);
+}
+
+form button:hover{
+  background-color:rgb(19, 123, 165);
+}
+form input:hover{
+  background-color:lightblue;
+}
+form select:hover{
+  background-color:lightblue;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.Clientmsg{
+  font: 200;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgb(80, 178, 211);
+  color: white;
+  text-align:right;
+  height: 200;
+}
+.textFooter{
+  padding-right: 100;
+  color:lightblue;
+}
+
+ .footer:hover{
+  background-color:rgb(19, 123, 165);
+}

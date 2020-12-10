@@ -1,0 +1,23 @@
+{
+  "name": "screenshot-app",
+  "version": "1.0.0",
+  "description": "biolerplate for React and Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Vimal K Francis",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "express": "^4.17.1",
+    "node-webshot": "^1.0.4",
+    "webshot": "^0.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
